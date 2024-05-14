@@ -6,6 +6,9 @@ import os
 import pandas as pd
 import re
 import tiktoken
+import json
+
+REVIEWS_FILE = 'reviews.json'
 
 client = OpenAI(
     api_key= "sk-proj-z18dQbDp7j0g3WsDtCrBT3BlbkFJ8iFn2gviIhJ5YaeGeWrV",
@@ -113,5 +116,29 @@ def ask_question():
 
     return jsonify(response), 200
 
+def load_reviews():
+    if os.path.exists(REVIEWS_FILE):
+        with open(REVIEWS_FILE, 'r') as file:
+            return json.load(file)
+    return []
+
+def save_reviews(reviews):
+    with open(REVIEWS_FILE, 'w') as file:
+        json.dump(reviews, file, indent=4)
+
+@app.route('/submit_review', methods=['POST'])
+def submit_review():
+    data = request.get_json()
+    review = data.get('review')
+
+    if not review:
+        return jsonify({'error': 'Review text is required'}), 400
+
+    reviews = load_reviews()
+    reviews.append({'review': review})
+
+    save_reviews(reviews)
+    
+    return jsonify({'message': 'Review submitted successfully'}), 200
 if __name__ == '__main__':
     app.run(debug=True)

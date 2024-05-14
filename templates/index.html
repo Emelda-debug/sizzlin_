@@ -28,7 +28,8 @@
             width: 70%;
             margin-bottom: 10px;
         }
-        .review-form textarea::placeholder{
+
+        .review-form textarea::placeholder {
             color: grey;
         }
 
@@ -569,7 +570,9 @@
                     <div class="col-lg-6 col-12">
                         <div class="col-lg-12 col-12">
                             <em class="text-white">Here At Your Service</em>
-                            <h2 class="text-white mb-4 pb-lg-2"><img src="/static/images/sizzzla.png" alt="Icon description" class="icon" style="width: 200px; height: 200px;">Sizzzla </h2>
+                            <h2 class="text-white mb-4 pb-lg-2"><img src="/static/images/sizzzla.png"
+                                    alt="Icon description" class="icon" style="width: 200px; height: 200px;">Sizzzla
+                            </h2>
                         </div>
 
                         <form action="#" method="post"
@@ -600,7 +603,6 @@
                             document.getElementById('sendButton').addEventListener('click', function () {
                                 const input = document.getElementById('text');
                                 const question = input.value.trim();
-
                                 if (question) {
                                     // Display the sent message
                                     const chatWidget = document.querySelector('.chat-widget');
@@ -651,19 +653,50 @@
                             <em class="text-white">We love to hear from you, please</em>
                             <h2 class="text-white mb-4 pb-lg-2">Leave a Review</h2>
                         </div>
-    
+
                         <form action="#" method="post" class="custom-form review-form" role="form">
                             <div class="row">
                                 <div class="col-12">
-                                    <textarea style="background-color: white; color: black; height: 275px;" type="text" name="text" id="text" class="form-control"
-                                        placeholder="Type review here" required=""></textarea>
-                                    <button type="submit" id="sendButton" class="form-control">Send</button>
+                                    <textarea style="background-color: white; color: black; height: 275px;" type="text"
+                                        name="text" id="review" class="form-control" placeholder="Type review here"
+                                        required=""></textarea>
+                                    <button type="submit" id="sendReview" class="form-control">Send</button>
                                 </div>
                             </div>
                         </form>
+                        <script>
+                            document.getElementById('sendReview').addEventListener('click', function (event) {
+                                event.preventDefault();
+                                const reviewText = document.getElementById('review').value.trim();
+                                if (reviewText) {
+                                    fetch('/submit_review', {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json'
+                                            },
+                                            body: JSON.stringify({
+                                                review: reviewText
+                                            })
+                                        })
+                                        .then(response => {
+                                            if (response.ok) {
+                                                alert('Review submitted successfully!');
+                                                document.getElementById('text').value =
+                                                    '';
+                                            } else {
+                                                alert('Failed to submit review.');
+                                            }
+                                        })
+                                        .catch(error => {
+                                            console.error('Error:', error);
+                                            alert('An error occurred while submitting your review.');
+                                        });
+                                }
+                            });
+                        </script>
                     </div>
                     <div class="col-lg-12 mt-5">
-    
+
                         <iframe class="google-map"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.160648950799!2d31.045870075175234!3d-17.831102483133737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a4e454778c81%3A0xf2126897d3a0af22!2sJason%20Moyo%20Ave%2C%20Harare!5e0!3m2!1sen!2szw!4v1715687124226!5m2!1sen!2szw"
                             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
