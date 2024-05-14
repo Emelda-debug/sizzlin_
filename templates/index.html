@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>SizzlinSaharaSteakhouse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,700&display=swap"
+        rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/css/vegas.min.css" rel="stylesheet">
+    <link href="/static/css/tooplate-barista.css" rel="stylesheet">
+    <style>
+        .chat-widget {
+            overflow-y: auto;
+        }
+
+        .message {
+            background: #18181887;
+            padding: 12px;
+            border-radius: 12px;
+            width: 70%;
+            margin-bottom: 10px;
+        }
+        .review-form textarea::placeholder{
+            color: grey;
+        }
+
+        .message.sent {
+            float: left;
+        }
+
+        .message.received {
+            float: right;
+        }
+
+        .message-form input {
+            /* background: transparent !important; */
+            color: black !important;
+            border-color: rgba(255, 255, 255, 0.25) !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="/static/images/coffee-beans.png" class="navbar-brand-image img-fluid">
+                    Sizzlin Sahara
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_1">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_2">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_3">Our Menu</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4">Reviews</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="ms-lg-3">
+                        <a class="btn custom-btn custom-border-btn" href="/templates/reservation.html">
+                            Reservation
+                            <i class="bi-arrow-up-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6 col-12 mx-auto">
+                        <em class="small-text">Hi there! Welcome to</em>
+
+                        <h1> Sizzlin Sahara</h1>
+
+                        <p class="text-white mb-4 pb-lg-2">
+                            the authentic <em>African</em> taste
+                        </p>
+
+                        <a class="btn custom-btn custom-border-btn smoothscroll me-3" href="#section_2">
+                            Our Story
+                        </a>
+
+                        <a class="btn custom-btn smoothscroll me-2 mb-2" href="#section_3"><strong>Check
+                                Menu</strong></a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="hero-slides"></div>
+        </section>
+
+
+        <section class="about-section section-padding" id="section_2">
+            <div class="section-overlay"></div>
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <div class="col-lg-6 col-12">
+                        <div class="ratio ratio-1x1">
+                            <img src="/static/images/grilled-beef-steaks-with-spices-herbs-bbq-outdoorai-generative.jpg"
+                                type="video/mp4">
+
+                            Your browser does not support the video tag.
+                            </video>
+
+                            <div class="about-video-info d-flex flex-column">
+                                <h4 class="mt-auto">We Started Since 2020.</h4>
+
+                                <h4>The Best Steakhouse in the city</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-12 mt-4 mt-lg-0 mx-auto">
+                        <em class="text-white">Sizzlin Sahara</em>
+
+                        <h2 class="text-white mb-3">STEAKHOUSE</h2>
+
+                        <p class="text-white">The steakhouse has been in the city for as long as anyone can remember,
+                            and it has become the go-to steakhouse among the locals</p>
+
+                        <p class="text-white">The steakhouse is run by a local family and the recipes have been passed
+                            down for 5 generations now. The recipes are a reflection of the authentic African taste </p>
+
+                        <a href="#barista-team" class="smoothscroll btn custom-btn custom-border-btn mt-3 mb-4">Meet The
+                            Family</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="barista-section section-padding section-bg" id="barista-team">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
+
+                        <h2 class="text-white">The Family</h2>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <div class="team-block-wrap">
+                            <div class="team-block-info d-flex flex-column">
+                                <div class="d-flex mt-auto mb-3">
+                                    <h4 class="text-white mb-0">Simi</h4>
+
+                                    <p class="badge ms-4"><em>The Dad</em></p>
+                                </div>
+
+                                <p class="text-white mb-0">The visionary who started the steakhouse in his backyard. His
+                                    meals are inspired by his family's recipes,story and culture. He aims to share this
+                                    with the world</p>
+                            </div>
+
+                            <div class="team-block-image-wrap">
+                                <img src="/static/images/team/portrait-elegant-old-man-wearing-suit.jpg"
+                                    class="team-block-image img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <div class="team-block-wrap">
+                            <div class="team-block-info d-flex flex-column">
+                                <div class="d-flex mt-auto mb-3">
+                                    <h4 class="text-white mb-0">Shani</h4>
+
+                                    <p class="badge ms-4"><em>The Mom</em></p>
+                                </div>
+
+                                <p class="text-white mb-0">She is the business behind the brand. She started as the chef
+                                    helping Simi until she decided to put her MBA to use as the business administrator
+                                    and number cruncher</p>
+                            </div>
+
+                            <div class="team-block-image-wrap">
+                                <img src="/static/images/team/cute-korean-barista-girl-pouring-coffee-prepare-filter-batch-brew-pour-working-cafe.jpg"
+                                    class="team-block-image img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4">
+                        <div class="team-block-wrap">
+                            <div class="team-block-info d-flex flex-column">
+                                <div class="d-flex mt-auto mb-3">
+                                    <h4 class="text-white mb-0">Juba</h4>
+
+                                    <p class="badge ms-4"><em>The Bro</em></p>
+                                </div>
+
+                                <p class="text-white mb-0">Fresh out of culinary school, Juba brings in fresh
+                                    persepctives and new recipes to merge with the old.The perfect fusion for exquisite
+                                    cuisine to satisfy your palates</p>
+                            </div>
+
+                            <div class="team-block-image-wrap">
+                                <img src="/static/images/team/small-business-owner-drinking-coffee.jpg"
+                                    class="team-block-image img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="team-block-wrap">
+                            <div class="team-block-info d-flex flex-column">
+                                <div class="d-flex mt-auto mb-3">
+                                    <h4 class="text-white mb-0">Malaika</h4>
+
+                                    <p class="badge ms-4"><em>The Sis</em></p>
+                                </div>
+
+                                <p class="text-white mb-0">Malaika is en excellent cook with experience in African
+                                    cuisine. She has worked as a chef in all 4 corners of Africa. Her expetise is
+                                    evident in the food she makes </p>
+                            </div>
+
+                            <div class="team-block-image-wrap">
+                                <img src="/static/images/team/smiley-business-woman-working-cashier.jpg"
+                                    class="team-block-image img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="menu-section section-padding" id="section_3">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+                        <div class="menu-block-wrap">
+                            <div class="text-center mb-4 pb-lg-2">
+                                <em class="text-white">Delicious Menu</em>
+                                <h4 class="text-white">Lunch and Dinner</h4>
+                            </div>
+
+                            <div class="menu-block">
+                                <div class="d-flex">
+                                    <h6>Beef Fillet</h6>
+
+                                    <span class="underline"></span>
+
+                                    <strong class="ms-auto">$20.00</strong>
+                                </div>
+
+                                <div class="border-top mt-2 pt-2">
+                                    <small>With sides of mashed potato, seasonal veggies or chips</small>
+                                </div>
+                            </div>
+
+                            <div class="menu-block my-4">
+                                <div class="d-flex">
+                                    <h6>
+                                        T-bone Steak
+                                    </h6>
+
+                                    <span class="underline"></span>
+
+                                    <strong class="text-white ms-auto"><del>$18.50</del></strong>
+
+                                    <strong class="ms-2">$15.00</strong>
+                                </div>
+
+                                <div class="border-top mt-2 pt-2">
+                                    <small>With sides of mashed potato, seasonal veggies or chips</small>
+                                </div>
+                            </div>
+
+                            <div class="menu-block">
+                                <div class="d-flex">
+                                    <h6>Chicken
+                                        <span class="badge ms-3">Recommend</span>
+                                    </h6>
+
+                                    <span class="underline"></span>
+
+                                    <strong class="ms-auto"> $5.00 - $15.00</strong>
+                                </div>
+
+                                <div class="border-top mt-2 pt-2">
+                                    <small>Quarter, Half or Full</small>
+                                </div>
+                            </div>
+
+                            <div class="menu-block my-4">
+                                <div class="d-flex">
+                                    <h6>Lamb</h6>
+
+                                    <span class="underline"></span>
+
+                                    <strong class="ms-auto">$12.50</strong>
+                                </div>
+
+                                <div class="border-top mt-2 pt-2">
+                                    <small>With sides of mashed potato, seasonal veggies or chips</small>
+                                </div>
+                            </div>
+
+                            <div class="menu-block">
+                                <div class="d-flex">
+                                    <h6>Taste of the Sea</h6>
+
+                                    <span class="underline"></span>
+
+                                    <strong class="ms-auto">$18.00</strong>
+                                </div>
+
+                                <div class="border-top mt-2 pt-2">
+                                    <small>With selected seafood, please enquire about availability</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="menu-block-wrap">
+                            <div class="text-center mb-4 pb-lg-2">
+                                <em class="text-white">Scratch that Sweets Itch</em>
+                                <h4 class="text-white">Delectable Desserts</h4>
+                            </div>
+
+                            <div class="menu-block">
+                                <div class="d-flex">
+                                    <h6>Red Velvet Slice</h6>
+
+                                    <span class="underline"></span>
+
+                                    <strong class="text-white ms-auto"><del>$10.50</del></strong>
+
+                                    <strong class="ms-2">$7.50</strong>
+                                </div>
+
+                                <div class="border-top mt-2 pt-2">
+                                    <small>Indulgent, Rich Red Velvet Cake with Smooth Cream Cheese Frosting</small>
+                                </div>
+                            </div>
+
+                            <div class="menu-block my-4">
+                                <div class="d-flex">
+                                    <h6>
+                                        Baobab Ice-cream
+                                        <span class="badge ms-3">Recommend</span>
+                                    </h6>
+
+                                    <span class="underline"></span>
+
+                                    <strong class="ms-auto">$8.00</strong>
+                                </div>
+
+                                <div class="border-top mt-2 pt-2">
+                                    <small>Decadent, Creamy, Delectable Baobab ice cream</small>
+                                </div>
+                            </div>
+
+                            <div class="menu-block">
+                                <div class="d-flex">
+                                    <h6>Chocolate Mousse</h6>
+
+                                    <span class="underline"></span>
+
+                                    <strong class="ms-auto">$5.50</strong>
+                                </div>
+
+                                <div class="border-top mt-2 pt-2">
+                                    <small>Creamy, smooth dark chocolate mousse</small>
+                                </div>
+                            </div>
+
+                            <div class="menu-block my-4">
+                                <div class="d-flex">
+                                    <h6>Bird Plum Cream</h6>
+
+                                    <span class="underline"></span>
+
+                                    <strong class="ms-auto">$7.50</strong>
+                                </div>
+
+                                <div class="border-top mt-2 pt-2">
+                                    <small>Vanilla sponge served with tasty bird-plum flavoured cream and syrup</small>
+                                </div>
+                            </div>
+
+                            <div class="menu-block">
+                                <div class="d-flex">
+                                    <h6>Wild Loquat Sorbet</h6>
+
+                                    <span class="underline"></span>
+
+                                    <strong class="ms-auto">$7.25</strong>
+                                </div>
+
+                                <div class="border-top mt-2 pt-2">
+                                    <small>Rich Wild Loquat Sorbet and Milk Foam</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="reviews-section section-padding section-bg" id="section_4">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
+                        <em class="text-white">Reviews by Customers</em>
+
+                        <h2 class="text-white">Testimonials</h2>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-container timeline-container-left">
+                            <div class="timeline-content">
+                                <div class="reviews-block">
+                                    <div class="reviews-block-image-wrap d-flex align-items-center">
+                                        <img src="/static/images/reviews/young-woman-with-round-glasses-yellow-sweater.jpg"
+                                            class="reviews-block-image img-fluid" alt="">
+
+                                        <div class="">
+                                            <h6 class="text-white mb-0">Amahle</h6>
+                                            <em class="text-white"> Customers</em>
+                                        </div>
+                                    </div>
+
+                                    <div class="reviews-block-info">
+                                        <p>Everytime I go to the city, I go Sizzlin Sahara and I just can not get
+                                            enough! The food is deliriously delicious and the staff is welcoming</p>
+
+                                        <div class="d-flex border-top pt-3 mt-4">
+                                            <strong class="text-white">4.8 <small class="ms-2">Rating</small></strong>
+
+                                            <div class="reviews-group ms-auto">
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-container timeline-container-right">
+                            <div class="timeline-content">
+                                <div class="reviews-block">
+                                    <div class="reviews-block-image-wrap d-flex align-items-center">
+                                        <img src="/static/images/reviews/senior-man-white-sweater-eyeglasses.jpg"
+                                            class="reviews-block-image img-fluid" alt="">
+
+                                        <div class="">
+                                            <h6 class="text-white mb-0">Donovan</h6>
+                                            <em class="text-white"> Customers</em>
+                                        </div>
+                                    </div>
+
+                                    <div class="reviews-block-info">
+                                        <p>I am yet to find a place that presents authentic African food with the modern
+                                            finnesse </p>
+
+                                        <div class="d-flex border-top pt-3 mt-4">
+                                            <strong class="text-white">5 Star <small
+                                                    class="ms-2">Rating</small></strong>
+
+                                            <div class="reviews-group ms-auto">
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-container timeline-container-left">
+                            <div class="timeline-content">
+                                <div class="reviews-block">
+                                    <div class="reviews-block-image-wrap d-flex align-items-center">
+                                        <img src="/static/images/reviews/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair.jpg"
+                                            class="reviews-block-image img-fluid" alt="">
+
+                                        <div class="">
+                                            <h6 class="text-white mb-0">Zamani</h6>
+                                            <em class="text-white"> Customers</em>
+                                        </div>
+                                    </div>
+
+                                    <div class="reviews-block-info">
+                                        <p>Sizzlin Sahara for a taste of hot, fiery food!!! They have my heart and taste
+                                            buds too lol :)</p>
+
+                                        <div class="d-flex border-top pt-3 mt-4">
+                                            <strong class="text-white">5 Star <small
+                                                    class="ms-2">Rating</small></strong>
+
+                                            <div class="reviews-group ms-auto">
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                                <i class="bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact-section section-padding" id="section_5">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-lg-6 col-12">
+                        <div class="col-lg-12 col-12">
+                            <em class="text-white">Here At Your Service</em>
+                            <h2 class="text-white mb-4 pb-lg-2"><img src="/static/images/sizzzla.png" alt="Icon description" class="icon" style="width: 200px; height: 200px;">Sizzzla </h2>
+                        </div>
+
+                        <form action="#" method="post"
+                            style="border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 20px;"
+                            class="custom-form contact-form" role="form">
+                            <div class="chat-widget"
+                                style="height: 300px; padding: 20px; color: white; font-size: 14px; font-weight: 600;">
+                                <div class="message sent">
+                                    Where are you located?
+                                </div>
+                                <div class="message received">
+                                    9th Street Harare
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex message-form">
+                                        <input style="height: 55px; border-radius: 20px 0px 0px 20px; margin-bottom: 0;"
+                                            type="text" name="text" id="text" class="form-control"
+                                            placeholder="What's your question today?" required="">
+                                        <button style="width: 140px; height: 55px; border-radius: 0px 20px 20px 0px;"
+                                            type="submit" id="sendButton" class="form-control">Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <script>
+                            document.getElementById('sendButton').addEventListener('click', function () {
+                                const input = document.getElementById('text');
+                                const question = input.value.trim();
+
+                                if (question) {
+                                    // Display the sent message
+                                    const chatWidget = document.querySelector('.chat-widget');
+                                    const sentMessage = document.createElement('div');
+                                    sentMessage.className = 'message sent';
+                                    sentMessage.textContent = question;
+                                    chatWidget.appendChild(sentMessage);
+                                    chatWidget.scrollTop = chatWidget.scrollHeight;
+
+                                    // Send the question to the API
+                                    fetch('/ask', {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json'
+                                            },
+                                            body: JSON.stringify({
+                                                question: question
+                                            })
+                                        })
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            // Display the received answer
+                                            const receivedMessage = document.createElement('div');
+                                            receivedMessage.className = 'message received';
+                                            receivedMessage.textContent = data.answer;
+                                            chatWidget.appendChild(receivedMessage);
+                                            chatWidget.scrollTop = chatWidget.scrollHeight;
+                                        })
+                                        .catch(error => {
+                                            console.error('Error:', error);
+                                            const receivedMessage = document.createElement('div');
+                                            receivedMessage.className = 'message received';
+                                            receivedMessage.textContent =
+                                                'There was an error processing your request.';
+                                            chatWidget.appendChild(receivedMessage);
+                                            chatWidget.scrollTop = chatWidget.scrollHeight;
+                                        });
+
+                                    // Clear the input
+                                    input.value = '';
+                                }
+                            });
+                        </script>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mx-auto mt-5 mt-lg-0 ps-lg-5">
+                        <div class="col-lg-12 col-12">
+                            <em class="text-white">We love to hear from you, please</em>
+                            <h2 class="text-white mb-4 pb-lg-2">Leave a Review</h2>
+                        </div>
+    
+                        <form action="#" method="post" class="custom-form review-form" role="form">
+                            <div class="row">
+                                <div class="col-12">
+                                    <textarea style="background-color: white; color: black; height: 275px;" type="text" name="text" id="text" class="form-control"
+                                        placeholder="Type review here" required=""></textarea>
+                                    <button type="submit" id="sendButton" class="form-control">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-12 mt-5">
+    
+                        <iframe class="google-map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.160648950799!2d31.045870075175234!3d-17.831102483133737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a4e454778c81%3A0xf2126897d3a0af22!2sJason%20Moyo%20Ave%2C%20Harare!5e0!3m2!1sen!2szw!4v1715687124226!5m2!1sen!2szw"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-12 me-auto">
+                        <em class="text-white d-block mb-4">Where to find us?</em>
+
+                        <strong class="text-white">
+                            <i class="bi-geo-alt me-2"></i>
+                            Sizzlin Sahara Steakhouse, 9th Street, Harare
+                        </strong>
+
+                        <ul class="social-icon mt-4">
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-facebook">
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://x.com/minthu" target="_new" class="social-icon-link bi-twitter">
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-whatsapp">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-12 mt-4 mb-3 mt-lg-0 mb-lg-0">
+                        <em class="text-white d-block mb-4">Contact</em>
+
+                        <p class="d-flex mb-1">
+                            <strong class="me-2">Phone:</strong>
+                            <a href="tel: 305-240-9671" class="site-footer-link">
+                                (240)
+                                456 2409 671
+                            </a>
+                        </p>
+
+                        <p class="d-flex">
+                            <strong class="me-2">Email:</strong>
+
+                            <a href="mailto:info@yourgmail.com" class="site-footer-link">
+                                admin@sizzlinsahara.com
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <div class="col-lg-5 col-12">
+                        <em class="text-white d-block mb-4">Opening Hours</em>
+
+                        <ul class="opening-hours-list">
+                            <li class="d-flex">
+                                Monday - Friday
+                                <span class="underline"></span>
+
+                                <strong>12:00 - 22:00</strong>
+                            </li>
+
+                            <li class="d-flex">
+                                Saturday
+                                <span class="underline"></span>
+
+                                <strong>13:00 - 00:00</strong>
+                            </li>
+
+                            <li class="d-flex">
+                                Sunday
+                                <span class="underline"></span>
+
+                                <strong>Closed</strong>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-8 col-12 mt-4">
+                        <p class="copyright-text mb-0">Copyright © SizzlinSahara 2024
+                            - Design: <a rel="sponsored" href="https://www.tooplate.com" target="_blank">E.MADA</a></p>
+                    </div>
+                </div>
+        </footer>
+    </main>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.sticky.js"></script>
+    <script src="/static/js/click-scroll.js"></script>
+    <script src="/static/js/vegas.min.js"></script>
+    <script src="/static/js/custom.js"></script>
+
+</body>
+
+</html>
